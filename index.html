@@ -7,6 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
         body {
             font-family: 'Rajdhani', sans-serif;
@@ -18,63 +19,76 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            background: transparent;
+            background: radial-gradient(circle, #141414, #0c0c0c);
         }
 
         .container {
             background-color: #1e1e1e;
-            border-radius: 25px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            padding: 60px;
             width: 90%;
-            max-width: 700px;
+            max-width: 800px;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             transition: transform 0.4s ease, box-shadow 0.4s;
         }
 
         .container:hover {
-            transform: translateY(-20px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transform: translateY(-25px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
         }
 
         .logo {
-            max-width: 150px;
-            margin-bottom: 30px;
+            max-width: 180px;
+            margin-bottom: 40px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 
         h1 {
             color: #00e5ff;
-            margin-bottom: 40px;
-            font-size: 42px;
-            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 50px;
+            font-size: 48px;
+            font-family: 'Audiowide', cursive;
             font-weight: 700;
-            text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.7);
         }
 
         button {
             background-image: linear-gradient(to right, #00c6ff, #0072ff);
             color: white;
             border: none;
-            padding: 18px 35px;
-            font-size: 20px;
-            margin: 25px 0;
-            border-radius: 40px;
+            padding: 20px 40px;
+            font-size: 22px;
+            margin: 30px 0;
+            border-radius: 50px;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 8px 16px rgba(0, 114, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
         }
 
         button:hover {
             transform: scale(1.1);
-            box-shadow: 0 12px 24px rgba(0, 114, 255, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 114, 255, 0.5);
         }
 
         pre, code {
             background-color: #222;
             border: 1px solid #333;
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 20px;
+            padding: 30px;
             text-align: left;
             overflow-x: auto;
             font-size: 14px;
@@ -84,20 +98,20 @@
 
         .instructions {
             background-color: #1e1e1e;
-            border-radius: 25px;
-            padding: 50px;
-            margin-top: 50px;
+            border-radius: 30px;
+            padding: 60px;
+            margin-top: 60px;
             text-align: left;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
         .instructions h2 {
             color: #00e5ff;
-            margin-bottom: 40px;
-            font-size: 30px;
-            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 50px;
+            font-size: 34px;
+            font-family: 'Audiowide', cursive;
             font-weight: 700;
-            text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.7);
             text-align: center;
         }
 
@@ -107,9 +121,9 @@
         }
 
         ol li {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             position: relative;
-            padding-left: 45px;
+            padding-left: 50px;
             line-height: 1.6;
             font-size: 16px;
         }
@@ -122,15 +136,15 @@
             top: 0;
             background-image: linear-gradient(to right, #00c6ff, #0072ff);
             color: white;
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 500;
-            box-shadow: 0 6px 12px rgba(0, 114, 255, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 114, 255, 0.4);
         }
 
         ul {
@@ -139,12 +153,12 @@
         }
 
         li ul {
-            margin: 10px 0;
+            margin: 15px 0;
             padding-left: 20px;
         }
 
         li ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             padding-left: 0;
             position: relative;
             font-size: 14px;
@@ -158,17 +172,17 @@
 
         .tooltip .tooltiptext {
             visibility: hidden;
-            width: 220px;
+            width: 240px;
             background-color: #444;
             color: #fff;
             text-align: center;
             border-radius: 6px;
-            padding: 5px 0;
+            padding: 6px 0;
             position: absolute;
             z-index: 1;
-            bottom: 125%; 
+            bottom: 150%; 
             left: 50%;
-            margin-left: -110px;
+            margin-left: -120px;
             opacity: 0;
             transition: opacity 0.3s;
             font-size: 14px;
