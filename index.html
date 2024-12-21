@@ -74,21 +74,55 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        h1, h2 {
+        .instructions h2 {
             color: #1f85de;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        ol, ul {
+        ol {
             padding-left: 20px;
+            counter-reset: list;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        ol li::before {
+            content: counter(list);
+            counter-increment: list;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #1f85de;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
         }
 
         ul {
             list-style-type: none;
+            padding-left: 0;
         }
 
-        li {
+        li ul {
+            margin-top: 10px;
             margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        li ul li {
+            margin-bottom: 10px;
+            padding-left: 0;
+            position: relative;
         }
 
         .tooltip {
@@ -117,15 +151,6 @@
         .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
     </style>
     <script>
